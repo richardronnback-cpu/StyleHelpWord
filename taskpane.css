@@ -1,0 +1,137 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", "Aptos", ui-sans-serif, sans-serif;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #201f1e;
+  padding: 8px;
+}
+
+#styleHeader {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  margin-bottom: 4px;
+  overflow: hidden;
+}
+
+.style-symbol {
+  color: #888;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.style-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: #201f1e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#titleField,
+#descriptionField {
+  width: 100%;
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.4;
+  background-color: #f3f2f1;
+  color: #201f1e;
+  border: 1px solid #c8c6c4;
+  border-radius: 3px;
+  outline: none;
+  resize: none;
+  cursor: default;
+  padding: 4px 6px;
+  margin-bottom: 4px;
+}
+
+#titleField {
+  height: 26px;
+  font-weight: 600;
+}
+
+#descriptionField {
+  height: 90px;
+}
+
+#titleField::placeholder,
+#descriptionField::placeholder {
+  color: #a19f9d;
+  font-weight: normal;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 22px;
+  margin-bottom: 8px;
+}
+
+#colorSwatch {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #c8c6c4;
+  border-radius: 3px;
+  flex-shrink: 0;
+  background-color: transparent;
+}
+
+.status-text {
+  font-size: 10px;
+  color: #a19f9d;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.url-section {
+  border-top: 1px solid #e1dfdd;
+  padding-top: 8px;
+}
+
+.url-label {
+  font-size: 11px;
+  color: #605e5c;
+  margin-bottom: 4px;
+}
+
+#urlInput {
+  width: 100%;
+  font-family: inherit;
+  font-size: 11px;
+  padding: 3px 6px;
+  border: 1px solid #c8c6c4;
+  border-radius: 3px;
+  outline: none;
+  margin-bottom: 4px;
+}
+
+#urlInput:focus {
+  border-color: #0078d4;
+}
+
+.btn {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #0078d4;
+  color: #ffffff;
+  border: none;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #106ebe;
+}

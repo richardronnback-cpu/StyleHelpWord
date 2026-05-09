@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OfficeApp
+  xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:type="TaskPaneApp">
+
+  <Id>b2e4e834-d6f7-4e44-8e3d-1f7a5c9b0d23</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Publishing Konsult</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="StyleHelp" />
+  <Description DefaultValue="Shows style descriptions for the current paragraph style." />
+  <IconUrl DefaultValue="http://localhost:3000/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="http://localhost:3000/assets/icon-80.png" />
+  <SupportUrl DefaultValue="https://publishingkonsult.se" />
+
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="http://localhost:3000/taskpane.html" />
+  </DefaultSettings>
+
+  <Permissions>ReadDocument</Permissions>
+</OfficeApp>

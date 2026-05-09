@@ -1,0 +1,17 @@
+{
+  "Heading 1": {
+    "title": "Chapter heading",
+    "description": "Use for main chapter titles. One per chapter.",
+    "color": "blue"
+  },
+  "Heading 2": {
+    "title": "Section heading",
+    "description": "Use for sections within a chapter.",
+    "color": ""
+  },
+  "Normal": {
+    "title": "Body text",
+    "description": "Default paragraph style for running text.",
+    "color": ""
+  }
+}
