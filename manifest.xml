@@ -10,8 +10,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="StyleHelp" />
   <Description DefaultValue="Shows style descriptions for the current paragraph style." />
-  <IconUrl DefaultValue="http://localhost:3000/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="http://localhost:3000/assets/icon-80.png" />
+  <IconUrl DefaultValue="https://richardronnback-cpu.github.io/StyleHelpWord/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://richardronnback-cpu.github.io/StyleHelpWord/assets/icon-80.png" />
   <SupportUrl DefaultValue="https://publishingkonsult.se" />
 
   <Hosts>
@@ -19,7 +19,7 @@
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="http://localhost:3000/taskpane.html" />
+    <SourceLocation DefaultValue="https://richardronnback-cpu.github.io/StyleHelpWord/taskpane.html" />
   </DefaultSettings>
 
   <Permissions>ReadDocument</Permissions>
