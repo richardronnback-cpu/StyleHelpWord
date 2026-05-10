@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="taskpane.css" />
 </head>
 <body>
+  <div id="scenarioBar">
+    <select id="scenarioSelect"></select>
+  </div>
+
   <div id="styleHeader">
     <span id="styleSymbol" class="style-symbol">¶</span>
     <span id="styleName" class="style-name"></span>
@@ -20,12 +24,6 @@
   <div class="toolbar">
     <div id="colorSwatch"></div>
     <span id="statusText" class="status-text"></span>
-  </div>
-
-  <div id="urlSection" class="url-section">
-    <div class="url-label">Style definitions URL:</div>
-    <input type="text" id="urlInput" placeholder="https://…/styles.json" spellcheck="false" />
-    <button id="btnLoadUrl" class="btn">Load</button>
   </div>
 
   <script src="taskpane.js"></script>

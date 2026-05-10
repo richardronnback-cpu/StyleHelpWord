@@ -94,44 +94,24 @@ body {
   flex: 1;
 }
 
-.url-section {
-  border-top: 1px solid #e1dfdd;
-  padding-top: 8px;
+#scenarioBar {
+  margin-bottom: 8px;
 }
 
-.url-label {
-  font-size: 11px;
-  color: #605e5c;
-  margin-bottom: 4px;
-}
-
-#urlInput {
+#scenarioSelect {
   width: 100%;
   font-family: inherit;
-  font-size: 11px;
-  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 6px;
   border: 1px solid #c8c6c4;
   border-radius: 3px;
+  background-color: #f3f2f1;
+  color: #201f1e;
   outline: none;
-  margin-bottom: 4px;
-}
-
-#urlInput:focus {
-  border-color: #0078d4;
-}
-
-.btn {
-  display: inline-block;
-  padding: 3px 10px;
-  background-color: #0078d4;
-  color: #ffffff;
-  border: none;
-  border-radius: 3px;
-  font-family: inherit;
-  font-size: 11px;
   cursor: pointer;
 }
 
-.btn:hover {
-  background-color: #106ebe;
+#scenarioSelect:focus {
+  border-color: #0078d4;
 }

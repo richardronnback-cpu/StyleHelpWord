@@ -2,52 +2,115 @@
 "use strict";
 
 let styleData = {};
+let scenarioList = [];
+let scenarioBaseDir = "";
 
 // ── Office init ────────────────────────────────────────────────────────────
 
 Office.onReady(async function (info) {
   if (info.host === Office.HostType.Word) {
-    document.getElementById("btnLoadUrl").addEventListener("click", onLoadUrl);
-    await loadStyleData();
+    document.getElementById("scenarioSelect").addEventListener("change", onScenarioChange);
+    await init();
     setupSelectionListener();
   }
 });
 
-// ── Style data loading ─────────────────────────────────────────────────────
+// ── Init ───────────────────────────────────────────────────────────────────
 
-async function loadStyleData() {
+async function init() {
   try {
-    const url = await readStyleHelpUrl();
-    if (url) {
-      document.getElementById("urlInput").value = url;
-      await fetchStyleData(url);
+    const { baseUrl, preferredScenario } = await readDocProps();
+    if (baseUrl) {
+      await loadIndex(baseUrl, preferredScenario);
     } else {
-      showStatus("Set a URL below to load style definitions");
+      showStatus("No styleBaseUrl set in document properties");
     }
   } catch (err) {
-    console.error("StyleHelp: loadStyleData →", err);
-    showStatus("Error reading document properties");
+    console.error("StyleHelp: init →", err);
+    showStatus("Error loading style definitions");
   }
 }
 
-async function readStyleHelpUrl() {
+async function readDocProps() {
   return Word.run(async (context) => {
     const props = context.document.properties.customProperties;
     props.load("items");
     await context.sync();
-    const match = props.items.find((p) => p.key === "StyleHelpURL");
-    return match ? match.value : null;
+    const find = (key) => {
+      const p = props.items.find((p) => p.key === key);
+      return p ? p.value : null;
+    };
+    return {
+      baseUrl: find("styleBaseUrl"),
+      preferredScenario: find("preferredScenario"),
+    };
   });
 }
 
-async function fetchStyleData(url) {
+// ── Index loading ──────────────────────────────────────────────────────────
+
+async function loadIndex(indexUrl, preferredScenario) {
   showStatus("Loading…");
+  scenarioBaseDir = indexUrl.substring(0, indexUrl.lastIndexOf("/") + 1);
+
+  const response = await fetch(indexUrl);
+  if (!response.ok) throw new Error(`HTTP ${response.status}`);
+  scenarioList = await response.json();
+
+  populateDropdown(scenarioList, preferredScenario);
+
+  const selectedId = document.getElementById("scenarioSelect").value;
+  const scenario = scenarioList.find((s) => s.id === selectedId) || scenarioList[0];
+  if (scenario) await loadScenario(scenario);
+}
+
+function populateDropdown(list, preferredId) {
+  const select = document.getElementById("scenarioSelect");
+  select.innerHTML = "";
+  list.forEach((s) => {
+    const opt = document.createElement("option");
+    opt.value = s.id;
+    opt.textContent = s.name;
+    select.appendChild(opt);
+  });
+  if (preferredId && list.find((s) => s.id === preferredId)) {
+    select.value = preferredId;
+  }
+}
+
+// ── Scenario loading ───────────────────────────────────────────────────────
+
+async function loadScenario(scenario) {
+  const url = scenarioBaseDir + scenario.file;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
   styleData = await response.json();
-  hideUrlInput();
-  showStatus(url.split("/").pop() || "Loaded");
+  showStatus(scenario.name);
   await updateDisplay();
+}
+
+async function onScenarioChange() {
+  const select = document.getElementById("scenarioSelect");
+  const scenario = scenarioList.find((s) => s.id === select.value);
+  if (!scenario) return;
+  try {
+    showStatus("Loading…");
+    await loadScenario(scenario);
+    await savePreferredScenario(scenario.id);
+  } catch (err) {
+    showStatus(`Error: ${err.message}`);
+  }
+}
+
+async function savePreferredScenario(scenarioId) {
+  try {
+    await Word.run(async (context) => {
+      context.document.properties.customProperties.add("preferredScenario", scenarioId);
+      await context.sync();
+    });
+  } catch (err) {
+    console.error("StyleHelp: savePreferredScenario →", err);
+  }
 }
 
 // ── Selection listener ─────────────────────────────────────────────────────
@@ -85,26 +148,6 @@ function renderStyle(styleName) {
 
   const swatch = document.getElementById("colorSwatch");
   swatch.style.backgroundColor = data.color || "transparent";
-}
-
-// ── URL input ──────────────────────────────────────────────────────────────
-
-async function onLoadUrl() {
-  const url = document.getElementById("urlInput").value.trim();
-  if (!url) return;
-  try {
-    await fetchStyleData(url);
-  } catch (err) {
-    showStatus(`Error: ${err.message}`);
-  }
-}
-
-function showUrlInput() {
-  document.getElementById("urlSection").style.display = "block";
-}
-
-function hideUrlInput() {
-  document.getElementById("urlSection").style.display = "none";
 }
 
 // ── UI helpers ─────────────────────────────────────────────────────────────
