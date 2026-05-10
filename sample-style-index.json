@@ -1,0 +1,4 @@
+[
+	{ "id": "commercial-brochure", "name": "Commercial brochure", "file": "commercial-brochure.json" }, 
+	{ "id": "corporate-newsletter", "name": "Corporate Newsletter", "file": "corporate-newsletter.json" }
+]
