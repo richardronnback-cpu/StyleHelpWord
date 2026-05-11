@@ -1,7 +1,7 @@
 /* global Office, Word */
 "use strict";
 
-let styleData = {};
+let styleData = { };
 let scenarioList = [];
 let scenarioBaseDir = "";
 

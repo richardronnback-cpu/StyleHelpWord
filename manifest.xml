@@ -19,7 +19,7 @@
   </Hosts>
 
   <DefaultSettings>
-    <SourceLocation DefaultValue="https://richardronnback-cpu.github.io/StyleHelpWord/taskpane.html" />
+    <SourceLocation DefaultValue="https://richardronnback-cpu.github.io/StyleHelpWord/taskpane.shtml" />
   </DefaultSettings>
 
   <Permissions>ReadDocument</Permissions>

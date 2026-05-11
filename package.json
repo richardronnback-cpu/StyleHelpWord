@@ -1,7 +1,7 @@
 {
   "name": "stylehelp-word",
   "version": "1.0.0",
-  "description": "StyleHelp task pane add-in for Microsoft Word",
+  "description": "StyleHelp  task pane add-in for Microsoft Word",
   "scripts": {
     "start": "node server.js"
   }
