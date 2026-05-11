@@ -84,7 +84,8 @@ async function loadScenario(scenario) {
   const url = scenarioBaseDir + scenario.file;
   const response = await fetch(url);
   if (!response.ok) throw new Error(`HTTP ${response.status}`);
-  styleData = await response.json();
+  const json = await response.json();
+  styleData = json.styles || json;
   showStatus(scenario.name);
   await updateDisplay();
 }

@@ -1,17 +1,22 @@
 {
-  "Heading 1": {
-    "title": "Corporate heading",
-    "description": "Use for main chapter titles. One per chapter.",
-    "color": "blue"
-  },
-  "Heading 2": {
-    "title": "Section heading",
-    "description": "Use for sections within a chapter.",
-    "color": "teal"
-  },
-  "Normal": {
-    "title": "Body text",
-    "description": "Default paragraph style for running text.",
-    "color": "maroon"
+  "name": "Corporate Newsletter",
+  "description": "",
+  "author": "",
+  "styles": {
+    "Heading 1": {
+      "title": "Corporate heading",
+      "description": "Use for main chapter titles. One per chapter.",
+      "color": "blue"
+    },
+    "Heading 2": {
+      "title": "Section heading",
+      "description": "Use for sections within a chapter.",
+      "color": "teal"
+    },
+    "Normal": {
+      "title": "Body text",
+      "description": "Default paragraph style for running text.",
+      "color": "maroon"
+    }
   }
 }
