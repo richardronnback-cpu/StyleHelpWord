@@ -1,4 +1,5 @@
 [
 	{ "id": "commercial-brochure", "name": "Commercial_brochure", "file": "commercial-brochure.json" }, 
-	{ "id": "corporate-newsletter", "name": "Corporate Newsletter", "file": "corporate-newsletter.json" }
+	{ "id": "product-manual-2026", "name": "Product manual 2026", "file": "product-manual-2026.json" },
+	{ "id": "corporate-newsletter", "name": "Corporate Newsletter", "file": "corporate-newsletter.json" }	
 ]
