@@ -2,5 +2,71 @@
   "name": "Product manual 2026",
   "description": "The styles in the product manual are intended for offical manual pages for the product line XYZ produced in 2026 or after. Older documents should use the previous templates",
   "author": "Richard",
-  "styles": {}
+  "styles": {
+    "H1": {
+      "title": "H1 Högsta rubriknivå",
+      "description": "Används för kapitelstart mm. \n\nVariationer av H1 finns för t.ex. omslag, eller för H1 som inte ska inkluderas i innehållsförteckning. ",
+      "color": "orange"
+    },
+    "H1_NoTOC": {
+      "title": "H1_NoTOC",
+      "description": "Identical look to H1, but does not appear in Table of Contents. Use for ",
+      "color": ""
+    },
+    "H2_NoTOC": {
+      "title": "H2_NoToc, special instructions",
+      "description": "Identical look to H2, but does not appear in Table of Contents. Use for Q&A section for each chapter and appendix subsection",
+      "color": "fuchsia"
+    },
+    "Body": {
+      "title": "Body, for normal text, see exceptions",
+      "description": "The Body style should be used for all normal body style, except for first paragraph following heading, and list styles.",
+      "color": ""
+    },
+    "T_Body": {
+      "title": "T_Body – brödtextformat för tabell",
+      "description": "Normalformatet för tabellceller. På detta format baserar man lämpligen alla variationer av tabellbröt som t.ex. tabellbröd inverterad, tabellbröd fet",
+      "color": ""
+    },
+    "Base": {
+      "title": "Base – basen för alla format",
+      "description": "Detta format ska ej röras annat än för att t.ex. tilldela språk, eller andra såna egenskaper som ska gå igenom alla andra format.",
+      "color": "fuchsia"
+    },
+    "C": {
+      "title": "C – bas för alla bildtexter",
+      "description": "Här anger man t.ex. typsnitt, storlek, radavstånd mm.",
+      "color": "yellow"
+    },
+    "F": {
+      "title": "F – basformat för alla faktarutor",
+      "description": "Här sätter man alla egenskaper som ska ligga till grund för alla variationer av textformat för faktarutor, t.ex. typsnittsfamilj, basstorlek, radavstånd etc",
+      "color": ""
+    },
+    "H": {
+      "title": "H - basformat för rubriker H1-H7",
+      "description": "Ange t.ex. typsnittsfamilje eller andra genomgående egenskaper",
+      "color": ""
+    },
+    "M": {
+      "title": "M – bas för mallformat",
+      "description": "Mallformat är såna som t.ex. för Pagina, Sidhuvud, sidfot, radnummer etc. Ange t.ex. typsnittsfamilj och basstorlek etc",
+      "color": ""
+    },
+    "P": {
+      "title": "P – basformatet för normal brödtext",
+      "description": "Här anger man t.ex. typsnitts, radavstånd, fäst mot baslinjeraster, justering mm. Alla variationer av brödtext baseras sedan på detta",
+      "color": "green"
+    },
+    "T": {
+      "title": "T – bas för alla tabellformat",
+      "description": "Här anger man t.ex. typsnitt, storlek, radavstånd etc",
+      "color": ""
+    },
+    "TOC": {
+      "title": "TOC – basformat för innehållsförteckning",
+      "description": "Ange t.ex. typsnittsfamilj etc",
+      "color": ""
+    }
+  }
 }
