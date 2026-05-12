@@ -1,0 +1,22 @@
+{
+  "name": "Newsletter",
+  "description": "",
+  "author": "Richard",
+  "styles": {
+    "Base": {
+      "title": "Base – basen för alla format",
+      "description": "Detta format ska ej röras annat än för att t.ex. tilldela språk, eller andra såna egenskaper som ska gå igenom alla andra format.",
+      "color": "fuchsia"
+    },
+    "H1": {
+      "title": "H1 Högsta rubriknivå",
+      "description": "Används för kapitelstart mm. \n\nVariationer av H1 finns för t.ex. omslag, eller för H1 som inte ska inkluderas i innehållsförteckning. ",
+      "color": "orange"
+    },
+    "H": {
+      "title": "H - basformat för rubriker H1-H7",
+      "description": "Ange t.ex. typsnittsfamilje eller andra genomgående egenskaper",
+      "color": ""
+    }
+  }
+}
