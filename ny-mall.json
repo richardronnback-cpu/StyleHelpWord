@@ -1,7 +1,7 @@
 {
-  "name": "",
-  "description": "",
-  "author": "",
+  "name": "Ny mall",
+  "description": "Här är ett test för ny mall",
+  "author": "Richard",
   "styles": {
     "C_Normal": {
       "title": "Bildtext – normalformat",
