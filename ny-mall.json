@@ -1,0 +1,132 @@
+{
+  "name": "",
+  "description": "",
+  "author": "",
+  "styles": {
+    "C_Normal": {
+      "title": "Bildtext – normalformat",
+      "description": "Marginaljusterad. Varianter för höger- eller vänsterställd text, liksom en variant med inverterad/vit text",
+      "color": ""
+    },
+    "H3_Betygskriterier": {
+      "title": "Rubrik för betygskriterier",
+      "description": "Samma som H3, men med ett indrag",
+      "color": "gray"
+    },
+    "F_Begrepp": {
+      "title": "Text för faktaruta Begrepp",
+      "description": "Notera att varje typ av faktaruta ska ha sitt eget format",
+      "color": "green"
+    },
+    "F_Begrepp_Rubrik": {
+      "title": "Rubrik för faktaruta Begrepp",
+      "description": "Notera att varje typ av faktaruta ska ha sitt eget format",
+      "color": "green"
+    },
+    "F_BRA": {
+      "title": "Text för Fakta BRA (att veta)",
+      "description": "Notera att varje typ av faktaruta ska ha sitt eget format",
+      "color": "purple"
+    },
+    "F_BRA_Rubrik": {
+      "title": "Faktaruta Rubrik BRA (att veta)",
+      "description": "Rubrik för faktarutor av typen \"BRA\" (att veta)",
+      "color": "purple"
+    },
+    "F_Fakta": {
+      "title": "Text för normala faktarutor",
+      "description": "Notera att andra typer av faktarutor ska ha egna format",
+      "color": "blue"
+    },
+    "F_Fakta_Rubrik": {
+      "title": "Rubrik för normala faktarutor",
+      "description": "Notera att andra typer av faktarutor ska ha egna format för rubrik och text",
+      "color": "blue"
+    },
+    "F_Tips": {
+      "title": "Text för faktaruta Tips",
+      "description": "Notera att varje typ av faktaruta ska ha sitt eget format",
+      "color": "yellow"
+    },
+    "F_Tips_Rubrik": {
+      "title": "Rubrik för faktaruta Tips",
+      "description": "",
+      "color": "yellow"
+    },
+    "F_Varning": {
+      "title": "Text för faktaruta Varning",
+      "description": "Notera att varje typ av faktaruta ska ha sitt eget format",
+      "color": "red"
+    },
+    "H0": {
+      "title": "H1 Högsta rubriknivå",
+      "description": "Används för kapitelstart mm. \n\nVariationer av H1 finns för t.ex. omslag, eller för H1 som inte ska inkluderas i innehållsförteckning. ",
+      "color": "orange"
+    },
+    "H1": {
+      "title": "H1 Rubrik",
+      "description": "Används för rubriker som inleder \"kapitel\" som inte tillhör huvudtexten, exempelvis rubrik för kursmål, ordlista etc",
+      "color": "gray"
+    },
+    "H2": {
+      "title": "H2 rubrik för sektion i kapitel",
+      "description": "H2 är den rubrik som ska användas för större/längre/viktigare sektioner inom resp kapitel",
+      "color": ""
+    },
+    "H3": {
+      "title": "H3 rubrik",
+      "description": "Används för kortare sektioner inom resp kapitel. Ska normalt utgöra en underrubrik till, och tillhöra en längre sektion med rubrik H2",
+      "color": "gray"
+    },
+    "H5": {
+      "title": "H6 – optional",
+      "description": "H6 is meant to be used only for documents with a complex substructure that requires nested logical structures. ",
+      "color": ""
+    },
+    "CI_Kapitel": {
+      "title": "Centralt innehåll punkter",
+      "description": "Detta format ska användas för varje punkt i det centrala innehållet i resp kapitel. Den första och sista punkten har egna format som ska användas för sådana rader",
+      "color": ""
+    },
+    "CI_Kapitel_Avslut": {
+      "title": "Centralt innehåll punktlista avslut",
+      "description": "Detta format ska användas för att avsluta punktlistan för centralt innehåll i resp kapitel. Det ger en avslutande utformning på punkten och linjen till vänster om stycket",
+      "color": ""
+    },
+    "CI_Kapitel_Ingress": {
+      "title": "Kapitel-ingress",
+      "description": "Detta format ska användas för det stycke som beskriver kapitles innehåll",
+      "color": ""
+    },
+    "H1_Kapitel": {
+      "title": "Kapitelrubrik",
+      "description": "Detta format _ska_ användas till kapitelrubriken. Det ska _inte_användas på andra ställen.",
+      "color": ""
+    },
+    "P_Bröd": {
+      "title": "Bröd – normalformat för text",
+      "description": "Detta är det styckeformat som ska användas för normal löptext. Varianter med mindre eller inget avstånde efter finns, liksom för punkter och numrerade listor",
+      "color": "black"
+    },
+    "P_Bröd_Punkter": {
+      "title": "Brödtext punktlista",
+      "description": "Används för ej numrerade listor (punktlistor) i brödtext",
+      "color": "black"
+    },
+    "T_Bröd": {
+      "title": "T_Body – brödtextformat för tabell",
+      "description": "Normalformatet för tabellceller. På detta format baserar man lämpligen alla variationer av tabellbröt som t.ex. tabellbröd inverterad, tabellbröd fet",
+      "color": ""
+    },
+    "Base": {
+      "title": "Base – basen för alla format",
+      "description": "Detta format ska ej röras annat än för att t.ex. tilldela språk, eller andra såna egenskaper som ska gå igenom alla andra format.",
+      "color": "fuchsia"
+    },
+    "TOC": {
+      "title": "TOC – basformat för innehållsförteckning",
+      "description": "Ange t.ex. typsnittsfamilj etc",
+      "color": ""
+    }
+  }
+}
